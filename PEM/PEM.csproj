@@ -1,0 +1,148 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\PFAControllers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\css\NewFolder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\assets\css\bootstrap.css.map" />
+    <None Include="wwwroot\css\assets\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\css\assets\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\css\assets\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\css\assets\fonts\fonts.zip" />
+    <None Include="wwwroot\css\assets\fonts\la-brands-400.svg" />
+    <None Include="wwwroot\css\assets\fonts\la-brands-400.woff2" />
+    <None Include="wwwroot\css\assets\fonts\la-regular-400.svg" />
+    <None Include="wwwroot\css\assets\fonts\la-regular-400.woff2" />
+    <None Include="wwwroot\css\assets\fonts\la-solid-900.svg" />
+    <None Include="wwwroot\css\assets\fonts\la-solid-900.woff2" />
+    <None Include="wwwroot\css\assets\fonts\line-awesome.svg" />
+    <None Include="wwwroot\css\assets\fonts\line-awesome.woff2" />
+    <None Include="wwwroot\css\assets\fonts\MaterialIcons-Regular.svg" />
+    <None Include="wwwroot\css\assets\fonts\MaterialIcons-Regular.woff2" />
+    <None Include="wwwroot\css\assets\js\app.js" />
+    <None Include="wwwroot\css\assets\js\bootstrap-datetimepicker.min.js" />
+    <None Include="wwwroot\css\assets\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\css\assets\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\css\assets\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\css\assets\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\css\assets\js\chart.js" />
+    <None Include="wwwroot\css\assets\js\Chart.min.js" />
+    <None Include="wwwroot\css\assets\js\dataTables.bootstrap4.min.js" />
+    <None Include="wwwroot\css\assets\js\dropfiles.js" />
+    <None Include="wwwroot\css\assets\js\fullcalendar.min.js" />
+    <None Include="wwwroot\css\assets\js\html5shiv.min.js" />
+    <None Include="wwwroot\css\assets\js\jquery-3.6.0.min.js" />
+    <None Include="wwwroot\css\assets\js\jquery-ui.min.js" />
+    <None Include="wwwroot\css\assets\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\css\assets\js\jquery.fullcalendar.js" />
+    <None Include="wwwroot\css\assets\js\jquery.maskedinput.min.js" />
+    <None Include="wwwroot\css\assets\js\jquery.slimscroll.js" />
+    <None Include="wwwroot\css\assets\js\jquery.slimscroll.min.js" />
+    <None Include="wwwroot\css\assets\js\jquery.ui.touch-punch.min.js" />
+    <None Include="wwwroot\css\assets\js\line-chart.js" />
+    <None Include="wwwroot\css\assets\js\mask.js" />
+    <None Include="wwwroot\css\assets\js\moment.min.js" />
+    <None Include="wwwroot\css\assets\js\multiselect.min.js" />
+    <None Include="wwwroot\css\assets\js\respond.min.js" />
+    <None Include="wwwroot\css\assets\js\select2.min.js" />
+    <None Include="wwwroot\css\assets\js\task.js" />
+    <None Include="wwwroot\css\assets\plugins\apexcharts\apexcharts.min.js" />
+    <None Include="wwwroot\css\assets\plugins\bootstrap-tagsinput\bootstrap-tagsinput.js" />
+    <None Include="wwwroot\css\assets\plugins\bootstrap-tagsinput\bootstrap-tagsinput.min.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\all.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\all.min.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\brands.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\brands.min.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\conflict-detection.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\conflict-detection.min.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\fontawesome.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\fontawesome.min.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\regular.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\regular.min.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\solid.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\solid.min.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\v4-shims.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\js\v4-shims.min.js" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\css\assets\plugins\fontawesome\webfonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\css\assets\plugins\morris\morris.js" />
+    <None Include="wwwroot\css\assets\plugins\morris\morris.min.js" />
+    <None Include="wwwroot\css\assets\plugins\raphael\raphael.min.js" />
+    <None Include="wwwroot\css\assets\plugins\sticky-kit-master\dist\sticky-kit.js" />
+    <None Include="wwwroot\css\assets\plugins\sticky-kit-master\dist\sticky-kit.min.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-ar-AR.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-bg-BG.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-ca-ES.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-cs-CZ.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-da-DK.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-de-DE.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-el-GR.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-es-ES.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-es-EU.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-fa-IR.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-fi-FI.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-fr-FR.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-gl-ES.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-he-IL.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-hr-HR.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-hu-HU.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-id-ID.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-it-IT.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-ja-JP.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-ko-KR.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-lt-LT.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-lt-LV.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-mn-MN.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-nb-NO.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-nl-NL.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-pl-PL.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-pt-BR.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-pt-PT.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-ro-RO.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-ru-RU.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-sk-SK.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-sl-SI.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-sr-RS-Latin.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-sr-RS.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-sv-SE.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-ta-IN.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-th-TH.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-tr-TR.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-uk-UA.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-uz-UZ.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-vi-VN.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-zh-CN.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\lang\summernote-zh-TW.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\plugin\databasic\summernote-ext-databasic.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\plugin\hello\summernote-ext-hello.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\plugin\specialchars\summernote-ext-specialchars.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\summernote-bs4.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\summernote-bs4.min.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\summernote-lite.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\summernote-lite.min.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\summernote.js" />
+    <None Include="wwwroot\css\assets\plugins\summernote\dist\summernote.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Syncfusion.XlsIO.Net.Core" Version="19.4.0.55" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PEM.Service\PEM.Service.csproj" />
+    <PackageReference Include="DevExtreme.AspNet.Core" Version="21.2.6" />
+    <PackageReference Include="DevExtreme.AspNet.Data" Version="2.8.2" />
+  </ItemGroup>
+</Project>

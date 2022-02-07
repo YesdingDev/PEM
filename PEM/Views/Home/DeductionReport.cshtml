@@ -1,0 +1,109 @@
+﻿	@using PEM.Models
+@model IEnumerable<DeductionReportViewModel>
+<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Contact Main Row -->
+				<div class="chat-main-row">
+				
+					<!-- Contact Wrapper -->
+					<div class="chat-main-wrapper">
+						<div class="col-lg-12 message-view">
+						  <div class="chat-window">
+								<div class="fixed-header">
+									<div class="row">
+										<div class="col-6">
+											<h6 class="page-title mb-0"></h6> 
+										</div>
+									   <div class="col-6">
+											<div class="navbar justify-content-end">
+												<div class="search-box m-t-0">
+													<div class="input-group input-group-sm">
+														<input type="text" class="form-control" placeholder="Search">
+															<button class="btn" type="button"><i class="fa fa-search"></i></button>
+													</div>
+												</div>
+												<ul class="nav float-end custom-menu">
+													<li class="nav-item dropdown dropdown-action">
+														<a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-cog"></i></a>
+														<div class="dropdown-menu">
+															<a class="dropdown-item" href="javascript:void(0)">Menu 1</a>
+															<a class="dropdown-item" href="javascript:void(0)">Menu 2</a>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--<div class="chat-contents">
+							<div class="chat-content-wrap">
+							<div class="col-md-12" style="margin-left:150px; margin-top:10px;">
+							<div class="float-right mb-2">
+								<a type="button" 
+								asp-action="ExportDeductionReportData"
+								asp-controller="Home"
+								class="btn btn-primary">
+								Export to CSV
+								</a>
+							</div>
+                            </div>
+						
+							
+					<!--start pfa type table-->			
+					
+					
+					<!--end pfa type table-->	
+						<div class="row">
+						<div class="col-md-12" style="margin-left:150px;">
+							<div class="float-right mb-2">
+								<h3>Deduction Report</h3>
+							</div>
+                            </div>
+						</div>
+					
+						<div class="table-responsive">
+							<table class="table table-striped custom-table mb-0 datatable" >
+								<thead>
+									<tr>
+										<th>EmployeeTd</th>
+										<th>Name</th>
+										<th>TimeInMnute</th>
+
+
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (var deduction in Model)
+									{
+										<tr>
+											<td>@deduction.EmployeeId</td>
+											<td>@deduction.Name</td>
+											<td>@deduction.TimeInMinute</td>
+										</tr>
+									}
+
+								</tbody>
+							</table>
+
+						</div>
+					
+				</div>		
+							</div>
+
+
+
+
+
+                           </div>
+												
+				
+			            </div>
+			             <!-- /Page Wrapper -->
+			
+                    </div>
+		       
+		<!-- /Main Wrapper -->
+		
+		<!-- jQuery -->
+		

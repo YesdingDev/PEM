@@ -1,0 +1,120 @@
+﻿@page
+@model PEM.Views.Account.DashboardModel
+@{
+}
+
+
+<div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid pb-0">
+					<!-- Page Header -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="page-head-box">
+								<h3>Welcome Admin!</h3>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Job Dashboard</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+							<div class="card flex-fill tickets-card">
+								<div class="card-header">
+									<div class="text-center w-100 p-3">
+										<h3 class="bl-text mb-1">112</h3>
+										<h2>Projects</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+							<div class="card flex-fill tickets-card">
+								<div class="card-header">
+									<div class="text-center w-100 p-3">
+										<h3 class="bl-text mb-1">44</h3>
+										<h2>Clients</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+							<div class="card flex-fill tickets-card">
+								<div class="card-header">
+									<div class="text-center w-100 p-3">
+										<h3 class="bl-text mb-1">37</h3>
+										<h2>Tasks</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+							<div class="card flex-fill tickets-card">
+								<div class="card-header">
+									<div class="text-center w-100 p-3">
+										<h3 class="bl-text mb-1">218</h3>
+										<h2>Employees</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row jb-dashboard">
+								<div class="col-md-6 text-center">
+									<div class="card flex-fill">
+										<div class="card-header">
+											<h3 class="card-title">Total Revenue</h3>
+											<div class="dropdown">
+												<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													Last 6 months
+												</button>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+													<a class="dropdown-item" href="#">Last 6 months</a>
+													<a class="dropdown-item" href="#">Last 3 months</a>
+													<a class="dropdown-item" href="#">Last 1 months</a>
+												</div>
+											</div>
+										</div>
+										<div class="card-body">							
+											<div id="bar-charts"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 text-center">
+									<div class="card flex-fill">
+										<div class="card-header">
+											<h3 class="card-title">Sales Overview</h3>
+											<div class="dropdown">
+												<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													Last 6 months
+												</button>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+													<a class="dropdown-item" href="#">Last 6 months</a>
+													<a class="dropdown-item" href="#">Last 3 months</a>
+													<a class="dropdown-item" href="#">Last 1 months</a>
+												</div>
+											</div>
+										</div>
+										<div class="card-body">							
+											<div id="line-charts"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+</div>

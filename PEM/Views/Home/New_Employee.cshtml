@@ -1,0 +1,635 @@
+﻿		
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+
+					<!-- Page Header -->
+					<div class="row">
+						<!-- <div class="col-md-12">
+							<div class="page-head-box">
+								<h3>Events</h3>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Events</li>
+									</ol>
+								</nav>
+							</div>
+						</div> -->
+						
+					</div>
+					
+					<!-- /Page Header -->
+
+					<!-- Search Filter -->
+					<!--<div class="row filter-row">
+						<div class="col-md-8"></div>
+						<div class="col-md-4">
+							<div class="add-emp-section">
+								<a href="#" class="btn btn-success btn-add-emp" data-bs-toggle="modal" data-bs-target="#add_event"><i class="fas fa-plus"></i> Add Event</a>
+							</div>
+						</div>
+					</div>-->
+					<!-- /Search Filter -->
+					
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="card mb-0">
+
+								<div class="tab">
+									<button class="tablinks" onclick="openCity(event, 'Main')">Main</button>
+									<button class="tablinks" onclick="openCity(event, 'Date')">Date</button>
+									<button class="tablinks" onclick="openCity(event, 'Personal')">Personal</button>
+									<button class="tablinks" onclick="openCity(event, 'Account')">Account</button>
+								</div>
+
+								<div id="Main" class="tabcontent">
+  										<h3>Main</h3>
+  										<div class="container">
+											<form method="post" class="form1" id="main" action="">
+											<div class="row">                                            
+													<div class="left col-lg-5">
+                                                    <div class="mb-2">
+                                                        <label style="padding-left: 23px;">Employee ID</label>
+                                                        <input type="text" name="employee" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="AGM1" required/>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label style="padding-left: 23px;">Reporting To</label>
+                                                        <input type="text" name="report" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder=" Assistant General Manager" required/>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label style="padding-left: 23px;">Second Approval</label>
+                                                        <input type="text" name="approv" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="All" required/>
+                                                    </div>
+													<div class="mb-2">
+                                                        <label style="padding-left: 23px;">Approved By</label>
+                                                        <input type="text" name="prove" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="All" required/>
+                                                    </div>
+                                                </div>
+                                                <div class="right col-lg-5">
+                                                    
+                                                <div class="mb-2">
+                                                    <label style="padding-left: 23px;">Title </label>
+                                                    <input type="text" name="tit" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="1" required/>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label style="padding-left: 23px;">Suname</label>
+                                                    <input type="text" name="sun" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="26.00" required/>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label style="padding-left: 23px;">First Name</label>
+                                                    <input type="text" name="first" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="0.00" required />
+                                                </div>
+												<div class="mb-2">
+                                                    <label style="padding-left: 23px;">Other  Name</label>
+                                                    <input type="text" name="second" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="0.00" required/>
+                                                </div>
+												<div class="mb-2">
+                                                    <label style="padding-left: 23px;">Maiden  Name</label>
+                                                    <input type="text" name="other" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="0.00" required/>
+                                                </div>
+												<div class="col-lg-3 mb-2">
+													<label style="padding-left: 23px;">Active YN</label>
+													<input type="checkbox" name="hold" style="width: 100px; height: 35px;">
+												</div>
+											</div>
+											<div class="row" style="justify-content: end; margin-bottom: 10px; margin-right: 10px;">
+												<div class="col-md-1 mb-2">
+													<button type="button" name="nextbtn" value="submit" class="btn btn-primary" id="nextbtn">Next</button>
+													</div>
+													</div>
+
+											</div>
+										</form>
+									</div>
+								</div>			
+														<!--main2 start from here-->	
+												
+														<div id="Main2" class="tabcontent">
+														<h3>Main2</h3>
+															<div class="container">
+																<form method="post" class="form1" id="main2" action="">
+															  <div class="row">
+															  
+																  
+																	<div class="left col-lg-5 mb-2">
+												
+																		  <label style="padding-left: 23px;">Address 1</label>
+																		  <input type="text" name="employee" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="AGM1" required />
+																	  
+																	  <div class="mb-2">
+																		  <label style="padding-left: 23px;">Address 2</label>
+																		  <input type="text" name="addi" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder=" Assistant General Manager" required />
+																	  </div>
+																	  <div class="mb-2">
+																		  <label style="padding-left: 23px;">City</label>
+																		  <input type="text" name="city" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="All" required/>
+																	  </div>
+																	  <div class="mb-2">
+																		  <label style="padding-left: 23px;">State</label>
+																		  <input type="text" name="state" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="All" required/>
+																	  </div>
+																	 
+																	  <div class="mb-2">
+																		<label style="padding-left: 23px;"> Postal Address</label>
+																		<input type="text" name="addi" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder=" Assistant General Manager" required/>
+																	</div>
+																	<div class="mb-2">
+																		<label style="padding-left: 23px;">Country</label>
+																		<input type="text" name="city" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="All" required/>
+																	</div>
+																	<div class="mb-2">
+																		<label style="padding-left: 23px;"> Mobile Phone </label>
+																		<input type="text" name="state" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="All" required/>
+																	</div>
+															</div>
+  
+
+																  
+																  <div class="right col-lg-5">
+																	  
+																  <div class="mb-2">
+																	  <label style="padding-left: 23px;">Office Phone</label>
+																	  <input type="text" name="tit" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="1" required/>
+																  </div>
+																  <div class="mb-2">
+																	  <label style="padding-left: 23px;">Fax</label>
+																	  <input type="text" name="sun" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="26.00" required/>
+																  </div>
+																  <div class="mb-2">
+																	  <label style="padding-left: 23px;">Email Addres</label>
+																	  <input type="text" name="first" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="0.00" required/>
+																  </div>
+																  <div class="mb-2">
+																	  <label style="padding-left: 23px;">Employee Category</label>
+																	  <input type="text" name="second" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="0.00" required/>
+																  </div>
+																  <div class="mb-2">
+																	  <label style="padding-left: 23px;">Department</label>
+																	  <input type="text" name="other" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="0.00" required/>
+																  </div>
+																  <div class="mb-2">
+																	<label style="padding-left: 23px;">Designation</label>
+																	<input type="text" name="other" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="0.00" required/>
+																</div>
+																<div class="mb-2">
+																	<label style="padding-left: 23px;">Job Class</label>
+																	<input type="text" name="other" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="0.00" required/>
+																</div>
+															  			 </div>
+																		   <div class="row" style="justify-content: end; margin-bottom: 10px; margin-right: 10px;">
+																			<div class="col-md-1 mb-2">
+																				<button type="submit" name="submitbtn" value="submit" class="btn btn-primary" style="margin-right: 45px;  padding-right:10px;">Request Approval</button>
+																				</div>
+																				<div class="col-md-1 mb-2">
+																					<button type="button" name="paste-btn" value="paste" class="btn btn-success" style="margin-left: 30px;  padding-right:10px;">Paste</button>
+																					</div>
+																					<div class="col-md-1 mb-2">
+																						<button type="button" name="submit-btn" value="submit" class="btn btn-info" style="margin-left: 30px;  padding-right:10px;">ok</button>
+																						</div>
+																						<div class="col-md-1 mb-2">
+																							<button type="button" name="cancel-btn" value="submit" class="btn btn-danger" style="margin-left:10px; padding-right:10px;">Cancel</button>
+																							</div>
+								
+																						</div>
+																		</div>
+																	</form>
+																	</div>
+																	</div>
+						  
+														
+											
+											</div>
+										</div>
+											<!--main2 ends here-->
+									
+									
+							<!--	-->
+
+
+										<!----	<div id="Biometrics" class="tabcontent">
+  												<h3></h3>
+ 												 <p>Tax is the capital of France.</p> 
+											</div>-->
+
+													<div id="Date" class="tabcontent">
+														<div class="container">
+															<form method="post" id="firm" action="">
+																<div class="col-lg-6 mb-2">
+															<label style="padding-left: 23px;">Date of Birth </label>
+															<input type="text" name="Employ"  value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required/>
+														</div>
+														<div class="col-lg-6 mb-2">
+															<label style="padding-left: 23px;"> Date of Employment </label>
+															<input type="text" name="date" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder=""  required/>
+														</div>
+														<div class="col-lg-6 mb-2">
+															<label style="padding-left: 23px;">Date comfirmation </label>
+															<input type="text" name="confirm" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required/>
+														</div>
+														<div class="col-lg-6 mb-2">
+															<label style="padding-left: 23px;">Pension Scheme Registration Date </label>
+															<input type="text" name="scheme" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required/>
+														</div>
+														<div class="col-lg-6 mb-2">
+															<label style="padding-left: 23px;">Last Salary  Date </label>
+															<input type="text" name="salary" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required/>
+														</div>			
+														
+													<div class="row" style="justify-content: end; margin-bottom: 10px; margin-right: 10px;">
+														<div class="col-md-1 mb-2">
+															<button type="submit" name="submitbtn" value="submit" class="btn btn-primary" style="margin-right: 47px; padding-right:10px;">Request Approval</button>
+															</div>
+															<div class="col-md-1 mb-2">
+																<button type="button" name="paste-btn" value="paste" class="btn btn-success" style="margin-left: 30px; padding-right:10px;">Paste</button>
+																</div>
+																<div class="col-md-1 mb-2">
+																	<button type="button" name="submit-btn" value="submit" class="btn btn-info" style="margin-left: 30px; padding-right:10px;">ok</button>
+																	</div>
+																	<div class="col-md-1 mb-2">
+																		<button type="button" name="cancel-btn" value="submit" class="btn btn-danger" style="margin-left: 10px; padding-right:10px;">Cancel</button>
+																		</div>
+															
+														</div>
+														</form>	
+														
+														
+													</div>
+													</div>
+												
+												<div id="Personal" class="tabcontent">
+													<div class="container">
+														<form method="post"  action="">
+
+														<div class="row">
+															<div class="left col-lg-6">
+															
+															<div class="form-group  mb-2">
+															<label style="padding-left: 23px;">Gender </label>
+															<select class="select" name="gender" id="company" style="border-radius: 30px; margin-left: 23px;">
+															<option value="Male">Male</option>
+															<option value="Female">Female</option>
+															
+															</select>
+															</div>
+															<div class="form-group  mb-2">
+															<label style="padding-left: 23px;">Marital Status </label>
+															<select class="select" name="division" id="division" style="border-radius: 30px; margin-left: 23px;">
+															<option value="Tuns">Married</option>
+															<option value="danger">Single</option>
+															<option value="info">divorce</option>
+															
+															</select>
+															</div>
+															<div class="form-group mb-2">
+															<label style="padding-left: 23px;">Nationalty </label>
+															<select class="select" name="nationalty" id="nationalty" style="border-radius: 30px; margin-left: 23px;">
+															<option value="Success">Default</option>
+															<option value="danger">Danger</option>
+															<option value="info">Info</option>
+															</select>
+															</div>
+															<div class="form-group  mb-2">
+															<label style="padding-left: 23px;">State Of Origin </label>
+															<select class="select" name="origin" id="origin" style="border-radius: 30px; margin-left: 23px;">
+															<option value="Success">Department</option>
+															<option value="danger">Danger</option>
+															<option value="info">Info</option>	
+															</select>
+															</div>
+															<div class="form-group  mb-2">
+															<label style="padding-left: 23px;">Local Gorvernment Area </label>
+															<select class="select" name="local gorvernment" id="local gorvernment" style="border-radius: 30px; margin-left: 23px;">
+															<option value="Success">Department</option>
+															<option value="danger">Danger</option>
+															<option value="info">Info</option>															
+															</select>
+															</div>
+															<div class="form-group mb-2">
+															<label style="padding-left: 23px;">Geographical  Area </label>
+															<select class="select" name="geographical" id="geographical" style="border-radius: 30px; margin-left: 23px;">
+															<option value="Success">Department</option>
+															<option value="danger">Danger</option>
+															<option value="info">Info</option>															
+															</select>
+															</div>
+															<div class="form-group mb-2 ">
+															<label style="padding-left: 23px;">Pay State </label>
+															<select class="select" name="pay state" id="pay state" style="border-radius: 30px; margin-left: 23px;">
+															<option value="Success">Department</option>
+															<option value="danger">Danger</option>
+															<option value="info">Info</option>															
+															</select>
+															</div>
+															</div>
+															<div class="right col-lg-6">
+
+															<div class="form-group  mb-2">
+															<label style="padding-left: 23px;">Language</label>
+															<select class="select" name="cost" id="lang" style="border-radius: 30px; margin-left: 23px;">
+															<option value="Success">Department</option>
+															<option value="danger">Danger</option>
+															<option value="info">Info</option>															
+															</select>
+															</div>
+
+															<div class="form-group  mb-2">
+															<label style="padding-left: 23px;">Location</label>
+															<select class="select" name="location" id="location" style="border-radius: 30px; margin-left: 23px;">
+															<option value="Success">Department</option>
+															<option value="danger">Danger</option>
+															<option value="info">Info</option>															
+															</select>
+															</div>
+
+																<div class="form-group  mb-2">
+															<label style="padding-left: 23px;">Cost center</label>
+															<select class="select" name="cost" id="center" style="border-radius: 30px; margin-left: 23px;">
+															<option value="Success">Department</option>
+															<option value="danger">Danger</option>
+															<option value="info">Info</option>															
+																	</select>
+															</div>
+											
+														   <div class="col-lg-3 mb-2">
+															<label style="padding-left: 23px;">Disable</label>
+															<input type="checkbox" name="Disable" id="disable" style="width: 100px; height: 35px;">
+															</div>
+															<div class=" mb-2">
+                                                      	  <label style="padding-left: 23px;">Note</label>
+                                                      	  <input type="text" name="note" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required/>
+                                                 	  	 </div>
+															</div>
+													
+												
+													
+															<div class="row" style="justify-content: end; margin-bottom: 10px; margin-right: 10px;">
+																<div class="col-md-1 mb-2">
+																	<button type="submit" name="submitbtn" value="submit" class="btn btn-primary" style="margin-right: 47px;  padding-right:10px;">Request Approval</button>
+																</div>
+																<div class="col-md-1 mb-2">
+																	<button type="button" name="paste-btn" value="paste" class="btn btn-Success" style="margin-left: 30px;  padding-right:10px;">Paste</button>
+																</div>
+																<div class="col-md-1 mb-2">
+																	<button type="button" name="submit-btn" value="submit" class="btn btn-primary" style="margin-left: 30px;  padding-right:10px;">ok</button>
+																</div>
+																<div class="col-md-1 mb-2">
+																	<button type="button" name="cancel-btn" value="submit" class="btn btn-danger" style= "margin-left: 10px;  padding-right:10px;">Cancel</button>
+																</div>
+														
+															</div>
+												</div>
+											</form>
+											
+																								 </div>
+												</div>
+									  			
+
+												 <div id="Account" class="tabcontent">
+													<div class="container">
+														<form method="post" id="form" action="">
+														<div class="row">
+															<div class="col-lg-5								
+															<div class=" md-2">
+														    				 	 <label style="padding-left: 23px;">Auto Prmotion </label>
+														    					  <input type="text" name="auto" id="auto" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder=""  required/>
+													         				 </div>
+																		<div class="form-group  mb-2">
+																			<div class="mb-2">
+																				<label style="padding-left: 23px;">Work Rotation</label>
+																				<select class="form-control" data-placeholder="Rotate" name="dropdown" style="border-radius: 30px; margin-left: 23px;">
+																				<option value="success">Success</option>
+																				<option value="danger">Danger</option>
+																				</select>
+																			</div>
+																		</div>
+																			<div class="form-group  mb-2">
+																				<div class="mb-2">
+																					<label style="padding-left: 23px;">Bank Name</label>
+																						<select class="form-control" data-placeholder="banks" name="dropdown" style="border-radius: 30px; margin-left: 23px;">
+																							<option value="access">Access</option>
+																							<option value="first bank">First Bank</option>
+																							<option value="gtbank">GTBank</option>
+																							<option value="uba bank">UBA Bank</option>
+																							<option value="zenit bank">Zenit Bank</option>
+																						</select>
+																				</div>
+																			</div>
+
+													
+																	<div class=" mb-2">
+																		<label style="padding-left: 23px;">Bank Address</label>
+																	<input type="text" name="address" value="" id="red" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required/>
+																	</div>
+																		<div class=" mb-2">
+																	<label style="padding-left: 23px;">Bank Account Type</label>
+																	<input type="text" name="red" value="" id="red" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required/>
+																	</div>
+																	<div class=" mb-2">
+																		<label style="padding-left: 23px;">Bank Beneficiary Type</label>
+																	<input type="text" name="bene" value="" id="red" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required/>
+																	</div>
+																	<div class=" mb-2">
+																	<label style="padding-left: 23px;">Account Number </label>
+																	<input type="text" name="number" value="" id="red" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required/>
+																	</div>
+														</div>
+
+																	<div class="right col-lg-5">
+                                                    
+																		<div class="form-group">
+																	    	<div class="mb-2">
+																				<label style="padding-left: 23px;">Bank Refrence Number</label>
+																				<select class="form-control" data-placeholder="Rotate" name="dropdown" style="border-radius: 30px; margin-left: 23px;">
+																					<option value="success">Success</option>
+																					<option value="danger">Danger</option>
+																				</select>
+																			</div>
+																		</div>
+																		<div class="mb-2">
+																			<label style="padding-left: 23px;">Rounting Number </label>
+																			<input type="text" name="leave" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required/>
+																		</div>
+
+																		<div class="col-lg-3 mb-2">
+																			<label style="padding-left: 23px;">Hold Pay</label>
+																			<input type="checkbox" name="hold" style="width: 100px; height: 35px;">
+																		</div>
+																		<div class="mb-2">
+																			<label style="padding-left: 23px;">Currency ID</label>
+																			<input type="text" name="amount" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="0.00" required/>
+																		</div>
+																		<div class="col-lg-3 mb-2">
+																			<label style="padding-left: 23px;">Taxable</label>
+																			<input type="checkbox" name="hold" style="width: 100px; height: 35px;">
+																		</div>
+																		<div class="mb-2">
+																			<label style="padding-left: 23px;">PfA</label>
+																			<input type="text" name="amount" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="0.00" required />
+																		</div>
+																
+																	</div>
+														
+																
+															
+																   <div class="row" style="justify-content: end; margin-bottom: 10px; margin-right: 10px;">
+																			<div class="col-md-1 mb-2">
+																				<button type="submit" name="submitbtn" value="submit" class="btn btn-primary" style="margin-right: 45px; padding-right:10px;">Request Approval</button>
+																				</div>
+																				<div class="col-md-1 mb-2">
+																					<button type="button" name="paste-btn" value="paste" class="btn btn-success" style="margin-left: 30px; padding-right:10px">Paste</button>
+																					</div>
+																					<div class="col-md-1 mb-2">
+																						<button type="button" name="submit-btn" value="submit" class="btn btn-info" style="margin-left: 30px; padding-right:10px">ok</button>
+																						</div>
+																						<div class="col-md-1 mb-2">
+																							<button type="button" name="cancel-btn" value="submit" class="btn btn-danger" style="margin-left: 10px; padding-right:10px">Cancel</button>
+																							</div>
+								
+																						</div>
+																</form>	
+																
+				x	</div>
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0 datatable">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Discription</th>
+										
+										</tr>
+									</thead>
+									<</table>
+                                                
+                                            </div>
+												
+				</div>			
+		</div>
+												
+											
+												  
+												  
+	  
+													  
+	  
+	  
+				<!-- /Page Content -->
+			
+				<!-- Add Event Modal -->
+				<!--<div id="add_event" class="modal custom-modal fade" role="dialog">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Add Event</h5>
+								<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+									<i class="fas fa-times"></i>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label>Event Name <span class="text-danger">*</span></label>
+										<input class="form-control" type="text">
+									</div>
+									<div class="form-group">
+										<label>Event Date <span class="text-danger">*</span></label>
+										<div class="cal-icon">
+											<input class="form-control datetimepicker" type="text">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label">Category</label>
+										<select class="select form-control">
+											<option>Danger</option>
+											<option>Success</option>
+											<option>Purple</option>
+											<option>Primary</option>
+											<option>Pink</option>
+											<option>Info</option>
+											<option>Inverse</option>
+											<option>Orange</option>
+											<option>Brown</option>
+											<option>Teal</option>
+											<option>Warning</option>
+										</select>
+									</div>
+									<div class="submit-section">
+										<button class="btn btn-primary cancel-btn" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+										<button class="btn btn-primary submit-btn">Submit</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!-- /Add Event Modal -->
+				
+				<!-- Event Modal -->
+				<div class="modal custom-modal fade" id="event-modal">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Event</h5>
+								<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+									<i class="fas fa-times"></i>
+								</button>
+							</div>
+							<div class="modal-body"></div>
+							<div class="modal-footer text-center">
+								<button type="button" class="btn btn-success submit-btn save-event">Create event</button>
+								<button type="button" class="btn btn-danger submit-btn delete-event" data-bs-dismiss="modal">Delete</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Event Modal -->
+				
+				<!-- Add Category Modal-->
+				<div class="modal custom-modal fade" id="add-category">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Add a category</h4>
+							</div>
+							<div class="modal-body p-20">
+								<form>
+									<div class="row">
+										<div class="col-md-6">
+											<label class="col-form-label">Category Name</label>
+											<input class="form-control" placeholder="Enter name" type="text" name="category-name">
+										</div>
+										<div class="col-md-6">
+											<label class="col-form-label">Choose Category Color</label>
+											<select class="form-control" data-placeholder="Choose a color..." name="category-color">
+												<option value="success">Success</option>
+												<option value="danger">Danger</option>
+												<option value="info">Info</option>
+												<option value="pink">Pink</option>
+												<option value="primary">Primary</option>
+												<option value="warning">Warning</option>
+												<option value="orange">Orange</option>
+												<option value="brown">Brown</option>
+												<option value="teal">Teal</option>
+											</select>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-primary cancel-btn" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+								<button type="button" class="btn btn-danger save-category" data-bs-dismiss="modal">Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Add Category Modal-->
+				</div>
+            
+			<!-- /Page Wrapper -->
+			
+    
+		<!-- /Main Wrapper -->
+		

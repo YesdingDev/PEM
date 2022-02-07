@@ -1,0 +1,215 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using DevExtreme
+@using DevExtreme.AspNet.Mvc
+@using PEM.Models.ViewModels
+@using PEM.Service
+
+<!-- Page Header -->
+					<div class="row">
+						<div classss="col-md-12">
+							<div class="page-head-box">
+								<h3>Welcome Admin!</h3>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="index.html">Attendance</a></li>
+										<li class="breadcrumb-item active" aria-current="page"></li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+
+
+							    @(Html.DevExtreme().DataGrid().ID("gridContainer").ShowBorders(true)
+                                .DataSource(ds => ds.Mvc()
+                                .Controller("Home")
+                                .LoadAction("GetAttendance")
+                                .Key("CompanyId","DivisionId","DepartmentId","AttendanceDate","EmployeeId")
+        
+                                ).DataSourceOptions(d => d.Select(new [] {
+                                    "AttendanceDate", "EmployeeId", "EmployeeName"
+                                }))
+                                .Columns(c => {
+                                    c.Add().DataField("AttendanceDate").Caption("Attendance Date").Fixed(true).DataType(GridColumnDataType.Date);
+                                    c.Add().DataField("EmployeeId").Caption("Employee Id");
+                                    c.Add().DataField("EmployeeName").Caption("Name");
+                                    c.Add().DataField("ExpectedTimeIn").Caption("EcpectedTimeIn");
+                                    c.Add().DataField("EmployeeName").Caption("Name");
+                                    c.Add().DataField("EmployeeName").Caption("Name");
+                                    c.Add().DataField("EmployeeName").Caption("Name");
+                                    c.Add().DataField("EmployeeName").Caption("Name");
+                                    c.Add().DataField("EmployeeName").Caption("Name");
+                                    c.Add().DataField("EmployeeName").Caption("Name");
+                                    c.Add().DataField("EmployeeName").Caption("Name");
+                                })
+                            .RemoteOperations(true)
+                           @* .Editing(e => e
+                                .AllowAdding(true)
+                                .AllowUpdating(true)
+                                .AllowDeleting(true)
+                            )*@
+                            .ColumnChooser(c => c.Enabled(true)).ColumnFixing(c => c.Enabled(true))
+                                                .Export(e => e.Enabled(true).FileName("Attendance").AllowExportSelectedData(true))
+                                                .ColumnFixing(c => c.Enabled(true))
+                                                .AllowColumnReordering(true)
+                                                .AllowColumnResizing(true)
+                                                .ShowColumnLines(true)
+                                                .ShowRowLines(false)
+                                                .RowAlternationEnabled(false)
+                                                .HoverStateEnabled(true)
+                                                .ColumnAutoWidth(true)
+                                                .FilterRow(f => f.Visible(true))
+                                                .HeaderFilter(f => f.Visible(true))
+                                                .GroupPanel(p => p.Visible(true))
+                                                .WordWrapEnabled(true)
+                                                .Scrolling(s => s.Mode(GridScrollingMode.Virtual))
+                                                .ShowBorders(true)
+                                                .FocusedRowEnabled(false).RowAlternationEnabled(true)
+                                                .Grouping(g => g.AutoExpandAll(false))
+                                                .RemoteOperations(true)
+                                                .LoadPanel(loadPanel => loadPanel.Enabled(false))
+                                                .FilterRow(filterRow => filterRow
+                                                        .Visible(true)
+                                                        .ApplyFilter(GridApplyFilterMode.Auto)
+                                                    )
+                                                    .GroupPanel(p => p.Visible(true))
+                                                 .SearchPanel(searchPanel => searchPanel
+                                                        .Visible(true)
+                                                        .Width(250)
+                                                        .Placeholder("Search")
+                                                    )
+                                                .HeaderFilter(headerFilter => headerFilter.Visible(true))
+                                                .Scrolling(scrolling => scrolling.Mode(GridScrollingMode.Standard))
+                                                .LoadPanel(loadPanel => loadPanel.Enabled(true))
+                                                .Sorting(sorting => sorting.Mode(GridSortingMode.Multiple))
+                                                .Paging(paging => paging.PageSize(10))
+                                                    .Pager(pager =>
+                                                    {
+                                                        pager.ShowPageSizeSelector(true);
+                                                        pager.AllowedPageSizes(new[] { 5, 10, 20 });
+                                                        pager.ShowInfo(true);
+                                                    })
+                        )
+						</div>
+					</div>
+
+			
+				<!-- Page Content -->
+              
+
+                  
+						 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@using DevExtreme.AspNet.Mvc*@
+@**@@*@using PEM.Service.Helpers.POCO
+@using PEM.Models
+@model IEnumerable<AttendanceViewModel>
+
+                <div class="content container-fluid">
+    
+					<!-- Page Header -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="page-head-box">
+								<h3>Summary Form For The Month</h3>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Offer Approvals</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+                        <div class="row">
+						<div class="col-md-12" style="margin-left:150px;">
+							<div class="float-right mb-2">
+								<a type="button" 
+								asp-action="ExportAttendanceData"
+								asp-controller="Home"
+								class="btn btn-primary">
+								Export to CSV
+								</a>
+							</div>
+
+					<div class="row">
+						<div class="col-md-12" style="margin-left:150px;">
+							<div class="float-right mb-2">
+								<h3>Attendance Report</h3>
+							</div>
+                            </div>
+						</div>
+                    @if(Model is not null) {
+						<div class="table-responsive">
+							<table class="table table-striped custom-table mb-0 datatable">
+								<thead>
+									<tr>
+										<th>EmployeeId</th>
+										<th>Name</th>
+										<th>ExpectedTimeIn</th>
+										<th>ExpectedTimeOut</th>
+										<th>Actual Time In</th>
+										<th>Actual Time Out</th>
+										<th>Actual No OF Work Hrs</th>
+										<th>No Of Hrs To Be Paid</th>
+									</tr>
+								</thead>
+								    <tbody>
+                                            @foreach (var attendance in Model)
+                                            {
+                                                <tr>
+													<td>@attendance.EmployeeId</td>
+													  <td>@attendance.EmployeeName</td>
+														 <td>08:00</td>
+														<td>17:00</td>
+													 <td>@attendance.AttendanceDate</td>
+												 <td>@attendance.ClockOutTimeOut</td>
+													<td></td>
+														<td></td>
+														<td></td>
+                                                </tr>
+                                             }
+                                 </tbody>
+                         </table>
+                      </div>
+                    }
+                  </div>
+            </div>          
+*@

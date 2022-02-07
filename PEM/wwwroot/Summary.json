@@ -1,0 +1,82 @@
+[
+  {
+    "employeeId": "EMP/01",
+    "firstName": "Rainbow",
+    "lastName": "Akinboro",
+    "totalDaysAbsent": 20,
+    "totalDaysLate": 1,
+    "totalDaysPresent": 2
+  },
+  {
+    "employeeId": "EMP/02",
+    "firstName": "Ibikunle",
+    "lastName": "Anjorin",
+    "totalDaysAbsent": 20,
+    "totalDaysLate": 1,
+    "totalDaysPresent": 2
+  },
+  {
+    "employeeId": "EMP/03",
+    "firstName": "Adebowale",
+    "lastName": "John",
+    "totalDaysAbsent": 21,
+    "totalDaysLate": 0,
+    "totalDaysPresent": 1
+  },
+  {
+    "employeeId": "EMP/04",
+    "firstName": "Akinrinwa",
+    "lastName": "Matthew",
+    "totalDaysAbsent": 21,
+    "totalDaysLate": 1,
+    "totalDaysPresent": 1
+  },
+  {
+    "employeeId": "EMP/05",
+    "firstName": "Anas",
+    "lastName": "Gloria",
+    "totalDaysAbsent": 21,
+    "totalDaysLate": 0,
+    "totalDaysPresent": 1
+  },
+  {
+    "employeeId": "EMP/06",
+    "firstName": "Joachim",
+    "lastName": "Magrett",
+    "totalDaysAbsent": 21,
+    "totalDaysLate": 1,
+    "totalDaysPresent": 1
+  },
+  {
+    "employeeId": "EMP/07",
+    "firstName": "Enilolobo",
+    "lastName": "Iretioluwa",
+    "totalDaysAbsent": 21,
+    "totalDaysLate": 1,
+    "totalDaysPresent": 1
+  },
+  {
+    "employeeId": "EMP/08",
+    "firstName": "Oluwatunbi",
+    "lastName": "Esther",
+    "totalDaysAbsent": 21,
+    "totalDaysLate": 1,
+    "totalDaysPresent": 1
+  },
+  {
+    "employeeId": "EMP/09",
+    "firstName": "Hakeem",
+    "lastName": "Ibrahim",
+    "totalDaysAbsent": 21,
+    "totalDaysLate": 1,
+    "totalDaysPresent": 1
+  },
+  {
+    "employeeId": "EMP/010",
+    "firstName": "Henderson",
+    "lastName": "Alice",
+    "totalDaysAbsent": 19,
+    "totalDaysLate": 1,
+    "totalDaysPresent": 3
+  }
+]

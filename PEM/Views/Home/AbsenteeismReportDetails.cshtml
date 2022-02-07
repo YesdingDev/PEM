@@ -1,0 +1,108 @@
+﻿	@using PEM.Models
+@model IEnumerable<AbsenteeismReportDetailViewModel>
+
+
+<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Contact Main Row -->
+				<div class="chat-main-row">
+				
+					<!-- Contact Wrapper -->
+					<div class="chat-main-wrapper">
+						<div class="col-lg-12 message-view">
+						  <div class="chat-window">
+								<div class="fixed-header">
+									<div class="row">
+										<div class="col-6">
+											<h6 class="page-title mb-0"></h6> 
+										</div>
+									   <div class="col-6">
+											<div class="navbar justify-content-end">
+												<div class="search-box m-t-0">
+													<div class="input-group input-group-sm">
+														<input type="text" class="form-control" placeholder="Search">
+															<button class="btn" type="button"><i class="fa fa-search"></i></button>
+													</div>
+												</div>
+												<ul class="nav float-end custom-menu">
+													<li class="nav-item dropdown dropdown-action">
+														<a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-cog"></i></a>
+														<div class="dropdown-menu">
+															<a class="dropdown-item" href="javascript:void(0)">Menu 1</a>
+															<a class="dropdown-item" href="javascript:void(0)">Menu 2</a>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--<div class="chat-contents">
+									<div class="chat-content-wrap">
+							
+					<!--start pfa type table-->			
+						<div class="row">
+						<div class="col-md-12" style="margin-left:150px; margin-top:5px;">
+							<div class="float-right mb-2">
+								<a type="button" 
+								asp-action="ExportAbsenteeismReportDetailData"
+								asp-controller="Home"
+								class="btn btn-primary">
+								Export to CSV
+								</a>
+							</div>
+                            </div>
+							<div class="row">
+						<div class="col-md-12" style="margin-left:150px;">
+							<div class="float-right mb-2">
+								<h3>Absenteeism Report Details</h3>
+							</div>
+                            </div>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-striped custom-table mb-0 datatable" >
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Name</th>
+										<th>DateAbsent</th>
+
+
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (var absenteeism in Model)
+									{
+										<tr>
+											<td>@absenteeism.EmployeeId</td>
+											<td>@absenteeism.Name</td>
+											<td>@absenteeism.DateAbsent</td>
+										</tr>
+									}
+									</tbody>
+							</table>
+
+						</div>
+					
+					<!--end pfa type table-->			
+
+				</div>		
+							</div>
+
+
+
+
+
+                           </div>
+												
+				
+			            </div>
+			             <!-- /Page Wrapper -->
+			
+                    </div>
+		       
+		<!-- /Main Wrapper -->
+		
+		<!-- jQuery -->
+		

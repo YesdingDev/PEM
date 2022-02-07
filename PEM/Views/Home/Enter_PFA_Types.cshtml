@@ -1,0 +1,166 @@
+﻿	
+@model IEnumerable<PfaTypeViewModel> 
+<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Contact Main Row -->
+				<div class="chat-main-row">
+				
+					<!-- Contact Wrapper -->
+					<div class="chat-main-wrapper">
+						<div class="col-lg-12 message-view">
+						  <div class="chat-window">
+								<div class="fixed-header">
+									<div class="row">
+										<div class="col-6">
+											<h6 class="page-title mb-0"></h6> 
+										</div>
+									   <div class="col-6">
+											<div class="navbar justify-content-end">
+												<div class="search-box m-t-0">
+													<div class="input-group input-group-sm">
+														<input type="text" class="form-control" placeholder="Search">
+															<button class="btn" type="button"><i class="fa fa-search"></i></button>
+													</div>
+												</div>
+												<ul class="nav float-end custom-menu">
+													<li class="nav-item dropdown dropdown-action">
+														<a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-cog"></i></a>
+														<div class="dropdown-menu">
+															<a class="dropdown-item" href="javascript:void(0)">Menu 1</a>
+															<a class="dropdown-item" href="javascript:void(0)">Menu 2</a>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--<div class="chat-contents">
+									<div class="chat-content-wrap">
+										<div class="chat-wrap-inner">-->
+								<div class="container" style="width:100%;">
+
+										<form method="post" class="form1" id="form1" action="">
+											<div class="row">
+                                       	 <div class="left col-lg-5 mb-2">
+												
+                                               <div class="mb-2">
+                                                        <label style="padding-left: 23px;">PFA ID</label>
+                                                        <input type="text" name="group" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="ARM Pension" required readonly/>
+                                                </div>
+                                                    <div class="mb-2">
+                                                        <label style="padding-left: 23px;">PFA NAME</label>
+                                                        <input type="text" name="descript" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required readonly/>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label style="padding-left: 23px;">Address</label>
+                                                        <input type="text" name="next" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required readonly/>
+                                                    </div>
+													<div class="mb-2">
+														<label style="padding-left: 23px;">Phone Number </label>
+														<input type="text" name="pon" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required readonly/>
+													</div>
+													<div class="mb-2">
+														<label style="padding-left: 23px;">Email </label>
+														<input type="text" name="ema" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required readonly/>
+													</div>
+													<div class="mb-2">
+														<label style="padding-left: 23px;">Contact Person </label>
+														<input type="text" name="cop" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required readonly/>
+													</div>
+													<div class="mb-2">
+														<label style="padding-left: 23px;">Receaving Number </label>
+														<input type="text" name="rec" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required readonly/>
+													</div>
+													<div class="mb-2">
+														<label style="padding-left: 23px;">Account Number </label>
+														<input type="text" name="acc" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required readonly/>
+													</div>
+                                       	 </div>
+                                             <div class="right col-lg-5 mb-2">
+                                                    
+                                               			 <div class="mb-2">
+															<label style="padding-left: 23px;">PFA Free Code </label>
+															<input type="text" name="frd" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required readonly/>
+														</div>
+                                                			<div class="mb-2">
+															<label style="padding-left: 23px;">Instrument Number </label>
+															<input type="text" name="inn" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required readonly/>
+                                                			</div>
+                                                			<div class="mb-2">
+															<label style="padding-left: 23px;">Employer Code</label>
+															<input type="text" name="emp" value="" class="form-control" style="border-radius: 30px; margin-left: 23px;" placeholder="" required readonly/>
+                                                			</div>
+												
+												
+                                             </div>
+
+
+                                    
+
+                                               
+												<div class="row" style="justify-content: end; margin-right: 6px;">
+													<div class="col-md-1 mb-2">
+														<button type="button" name="editbtn" value="editbtn" class="btn btn-primary" id="tnEdti">Edit</button>
+															</div>
+															<div class="col-md-1 mb-2">
+																<button type="button" name="savebtn" value="save" class="btn btn-secondary" id="saveebtn">Save</button>
+																</div>
+															<div class="col-md-1">
+																<button type="button" name="cancelbtn" value="submit" class="btn btn-danger" id="cancellbtn">Cancel</button>
+																</div>
+															
+												</div>
+											</div>		
+										</form>	
+							 		
+						 	   </div>
+
+					<!--start pfa type table-->			
+					@if (Model is not null)
+					{
+						<div class="table-responsive">
+							<table class="table table-striped custom-table mb-0 datatable" >
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Discription</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (var pfaType in Model)
+									{
+										<tr>
+											<td>@pfaType.PFAId</td>
+											<td>@pfaType.PFADescription</td>
+										</tr>
+									}
+
+								</tbody>
+							</table>
+
+						</div>
+					}
+					<!--end pfa type table-->			
+
+				</div>		
+							</div>
+
+
+
+
+
+                           </div>
+												
+				
+			            </div>
+			             <!-- /Page Wrapper -->
+			
+                    </div>
+		       
+		<!-- /Main Wrapper -->
+		
+		<!-- jQuery -->
+		

@@ -1,0 +1,196 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+	Layout = "/Views/Shared/_IndexView.cshtml";
+}
+
+<div class="main-wrapper">
+    <div class="account-content">
+
+        <div class="container">
+            <!-- Account Logo -->
+            <div class="account-logo">
+                <a href="index.html"><img src="/css/assets/img/logo.gif" alt="Dreamguy's Technologies"></a>
+            </div>
+            <!-- /Account Logo -->
+
+            <div class="account-box">
+                <div class="account-wrapper">
+                    <h3 class="account-title">Login</h3>
+                    <p class="account-subtitle toTitle">Access to your dashboard</p>
+
+                    <!-- Account Form -->
+                    <form action="index.html">
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <input class="form-control" type="text" id="username">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label>Password</label>
+                                </div>
+                                <div class="col-auto">
+                                    <a class="text-muted" href="forgot-password.html">
+                                        Forgot password?
+                                    </a>
+                                </div>
+                            </div>
+                            <input class="form-control" type="password" id="password">
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn btn-primary account-btn" id="loginBtn" type="submit">Login</button>
+                        </div>
+                        <div class="account-footer">
+                            <p>Don't have an account yet? <a href="register.html">Register</a></p>
+                        </div>
+                    </form>
+                    <!-- /Account Form -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="~/plugins/jquery.min.js"></script>
+<script src="~/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="~/plugins/js.cookie.min.js"></script>
+<script src="~/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="~/plugins/jquery.blockui.min.js"></script>
+<script src="~/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="~/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+<script src="~/plugins/jquery-validation/js/additional-methods.min.js"></script>
+<script src="~/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+<script src="~/plugins/backstretch/jquery.backstretch.min.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN THEME GLOBAL SCRIPTS -->
+<script src="/plugins/app.min.js"></script>
+<!-- END THEME GLOBAL SCRIPTS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="/plugins/login-5.min.js"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<!-- BEGIN THEME LAYOUT SCRIPTS -->
+<!-- END THEME LAYOUT SCRIPTS -->
+<script>
+        //rootUrl = '@Url.Content("~")';
+        rootUrl = "https://localhost:7005";
+
+        function checkIfNull(value) {
+            return (value == "" || value == null || value == undefined) ? true : false;
+        }
+
+        $('.login-form').submit(function(){
+            e.preventDefault();
+            return false;
+        })
+
+        $('#loginBtn').click(function (e) {
+
+            e.preventDefault()
+            $('.loginValidation').remove()
+
+            var appendTo = '';
+            var username = $("#username").val();
+            var password = $("#password").val();
+
+
+            if (checkIfNull(username) || checkIfNull(password)) {
+                appendTo = '<span class="alert alert-danger loginValidation" style="display: flex; margin-top: 20pt">Please enter your valid credentials.</span>'
+                $('.toTitle').after(appendTo);
+                return;
+            }
+            var token = '@Html.AntiForgeryToken()';
+            var values = JSON.stringify({ "Username": username, "Password": password});
+
+            $.ajax({
+                type: 'GET', //this should be a post but don't worry about that one for now
+                dataType: 'json',
+                headers: {
+                  RequestVerificationToken: $(token).val()
+                },
+                url: rootUrl + '/Account/Login',
+                data: {"Username": username, "Password": password },
+                beforeSend: function(){
+                    disableButtons();
+                },
+                success: function (result) {
+              
+                    if (result) {
+                        if ((result.status == "Success")) {
+                          document.location.assign("@Url.Action("Dashboard","Account")");
+                        }
+                        else {
+                            appendTo = `<span class="alert alert-danger loginValidation" style="display: flex; margin-top: 20pt"> ${result.message} </span>`
+                            $('.toTitle').after(appendTo);
+                        };
+                    }
+                    else {
+                        appendTo = '<span class="alert alert-danger loginValidation" style="display: flex; margin-top: 20pt">There is an issue with logging you in.</span>'
+                        $('.toTitle').after(appendTo);
+                    };
+                },
+                complete:function(data){
+                    // Hide image container
+                    enableButtons();
+                  //document.location.assign("@Url.Action("Dashboard","Account")");
+                },
+                error: function (err) {
+
+                    appendTo = '<span class="alert alert-danger loginValidation" style="display: flex; margin-top: 20pt">There is an issue with logging you in.</span>'
+                    $('.toTitle').after(appendTo);
+                }
+
+            })
+        })
+     $('#resetPwd').click(function (e) {
+            e.preventDefault();
+            $('.validator').remove()
+            var appendTo = "";
+            var username = $("#usernameReset").val();
+            if (username == "" || username == null) {
+                appendTo = '<br><br><span class="alert alert-danger validator">Please enter your username.</span>'
+                $('.toApp').append(appendTo);
+                return;
+            }
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                url: rootUrl + '/Account/PassswordReset',
+                data: { "username": username },
+                success: function (result) {
+                    if ((result != null) && (result != undefined) && (result.Status == "Success")) {
+                        appendTo = '<br><br><span class="alert alert-success validator">Your new password has been sent to your email.</span>'
+                        $('.toApp').append(appendTo)
+                        $("#usernameReset").val("")
+                    }
+                    else {
+                        appendTo = '<br><br><span class="alert alert-danger validator">Please enter a valid username.</span>'
+                        $('.toApp').append(appendTo)
+                    };
+                },
+                error: function () {
+                    console.log(result)
+                }
+            });
+        })
+
+        function goToHome() {
+            document.location.assign("@Url.Action("Dashboard","Account")");
+        }
+        function enableButtons() {
+            $("#loginBtn").removeClass("disabled").html('Log In');
+        }
+
+        function disableButtons() {
+            $("#loginBtn").addClass("disabled").html('Logging in... <i class="fa fa-spinner fa-spin"></i>');
+        }
+
+    </script>

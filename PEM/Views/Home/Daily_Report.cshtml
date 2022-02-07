@@ -1,0 +1,112 @@
+﻿	<!-- Page Wrapper -->
+            
+	@model IEnumerable<Employee>
+				<!-- Page Content -->
+                <div class="content container-fluid">
+					<!-- Page Header -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="page-head-box">
+								<h3>Daily Report</h3>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Offer Approvals</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					<div id="Daily"></div>
+						
+					<div class="row">
+						<div class="col-lg-11" style="margin-left:150px;">
+							<div class="float-right mb-2">
+								<a type="button" 
+								asp-action="ExportEmployeeData"
+								asp-controller="Home"
+								class="btn btn-primary">
+								Export to CSV
+								</a>
+							</div>
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0 datatable " id="Employee">
+									<thead>
+										<tr>
+											<th>Employee ID</th>
+											<th>Attedance Date</th>									
+											<th>First Name</th>
+											<th>Last Name</th>
+											<th>TimeIn</th>
+											<th>TimeOut</th>
+											<th>Timein Address</th>
+											<th>Timeout Address2</th>
+											<th class="text-center">Attedance Status</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										@foreach (var employee in Model)
+										{
+											<tr>
+												<td>@employee.EmployeeId</td>
+												<td>@Convert.ToDateTime(employee.AttendanceDate).Date</td>												
+												<td>@employee.FirstName</td>
+												<td>@employee.LastName</td>
+												<td>@employee.TimeIn</td>
+												<td>@employee.TimeOut</td>
+												<td>@employee.TimeInAddress</td>
+												<td>@employee.TimeOutAddress2</td>
+												<td></td>
+											</tr>
+										}
+										
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                </div>
+				<!-- /Page Content -->
+				
+				<!-- Delete Job Modal -->
+				<div class="modal custom-modal fade" id="delete_job" role="dialog">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-body">
+								<div class="form-header">
+									<h3>Delete</h3>
+									<p>Are you sure want to delete?</p>
+								</div>
+								<div class="modal-btn delete-action">
+									<div class="row">
+										<div class="col-6">
+											<a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+										</div>
+										<div class="col-6">
+											<a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Delete Job Modal -->
+				
+            </div>
+
+			<div id="debug"></div>
+
+			<script>
+				fetch("test.json")
+				.then(response => response.json())
+				.then(data => {
+					console.log(data.setence)
+					document.querySelector("#debug").innerText = data
+				})
+			</script>
+			<!-- /Page Wrapper -->
+
+      

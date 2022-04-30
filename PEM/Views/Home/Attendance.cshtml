@@ -34,7 +34,7 @@
                                 .Key("CompanyId","DivisionId","DepartmentId","AttendanceDate","EmployeeId")
         
                                 ).DataSourceOptions(d => d.Select(new [] {
-                                    "AttendanceDate", "EmployeeId", "EmployeeName"
+                                    "AttendanceDate", "EmployeeId", "EmployeeName" , "ExpectedTimeIn"
                                 }))
                                 .Columns(c => {
                                     c.Add().DataField("AttendanceDate").Caption("Attendance Date").Fixed(true).DataType(GridColumnDataType.Date);
